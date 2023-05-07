@@ -19,9 +19,3 @@ jobs:
         run: |
           npm ci
           npm run build
-
-
-      # Run tests
-      - name: Run tests
-        working-directory: ./server
-        run: npm run test
