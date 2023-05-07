@@ -69,4 +69,6 @@ const routes = [
     handler:controller.recentRoom,
   }
 ];
+
 module.exports = routes;
+  
