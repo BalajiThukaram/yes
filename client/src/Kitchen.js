@@ -67,23 +67,23 @@ function Kitchen() {
       <table style={{margin: "0 auto", borderCollapse: "collapse",border: "2px solid black"}}>
         <thead>
           <tr>
-            <th style={{padding: "10px",border: "1px solid black",padding: "8px"}}>ID</th>
-            <th style={{padding: "10px",border: "1px solid black",padding: "8px"}}>Status</th>
-            <th style={{padding: "10px",border: "1px solid black",padding: "8px"}}>Temperature</th>
-            <th style={{padding: "10px",border: "1px solid black",padding: "8px"}}>Humidity</th>
-            <th style={{padding: "10px",border: "1px solid black",padding: "8px"}}>Date</th>
-            <th style={{padding: "10px",border: "1px solid black",padding: "8px"}}>Time</th>
+            <th style={{padding: "10px",border: "1px solid black"}}>ID</th>
+            <th style={{padding: "10px",border: "1px solid black"}}>Status</th>
+            <th style={{padding: "10px",border: "1px solid black"}}>Temperature</th>
+            <th style={{padding: "10px",border: "1px solid black"}}>Humidity</th>
+            <th style={{padding: "10px",border: "1px solid black"}}>Date</th>
+            <th style={{padding: "10px",border: "1px solid black"}}>Time</th>
           </tr>
         </thead>
         <tbody>
           {tableData.map((item) => (
             <tr key={item.id}>
-              <td style={{padding: "10px",border: "1px solid black",padding: "8px"}}>{item.id}</td>
-              <td style={{padding: "10px",border: "1px solid black",padding: "8px"}}>{item.motion}</td>
-              <td style={{padding: "10px",border: "1px solid black",padding: "8px"}}>{item.temperature}</td>
-              <td style={{padding: "10px",border: "1px solid black",padding: "8px"}}>{item.humidity}</td>
-              <td style={{padding: "10px",border: "1px solid black",padding: "8px"}}>{item.created_date}</td>
-              <td style={{padding: "10px",border: "1px solid black",padding: "8px"}}>{item.created_time}</td>              
+              <td style={{padding: "10px",border: "1px solid black"}}>{item.id}</td>
+              <td style={{padding: "10px",border: "1px solid black"}}>{item.motion}</td>
+              <td style={{padding: "10px",border: "1px solid black"}}>{item.temperature}</td>
+              <td style={{padding: "10px",border: "1px solid black"}}>{item.humidity}</td>
+              <td style={{padding: "10px",border: "1px solid black"}}>{item.created_date}</td>
+              <td style={{padding: "10px",border: "1px solid black"}}>{item.created_time}</td>              
             </tr>
           ))}
         </tbody>
