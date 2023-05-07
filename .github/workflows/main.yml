@@ -2,19 +2,32 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14.x'
-    - run: npm ci
-    - run: npm run test
+      - uses: actions/checkout@v2
+      
+      # Build client
+      - name: Build client
+        working-directory: ./client
+        run: |
+          npm ci
+          npm run build
+
+      # Build server
+      - name: Build server
+        working-directory: ./server
+        run: |
+          npm ci
+          npm run build
+
+      # Run tests
+      - name: Run tests
+        working-directory: ./server
+        run: npm run test
