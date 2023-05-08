@@ -5,7 +5,7 @@ const sequelize = require("./dbconn");
 const hello = (request, response) => {
   return "hello world";
 };
-
+// xxg
 const hallData = async (request, reply) => {
   const data = await hall.dataFromHall();
   console.log(data);
